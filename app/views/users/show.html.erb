@@ -1,7 +1,13 @@
 <div class="row">
   <div class="col-md-3">
     <div class="center">
-      <%= image_tag avatar_url(@user), class: "avatar-full" %> 
+    <% if current_user.image %>
+      <%= image_tag avatar_url(@user), class: "avatar-full" %>
+    <% else %>
+      <p class="text-center">
+      <i class="fa fa-user fa-5x"></i>
+      </p>
+    <% end %>
     </div>
     <div class="panel panel-default">
       <div class="panel-heading">Verification</div>
