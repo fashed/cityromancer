@@ -136,18 +136,19 @@
     <!-- Google Map -->
     <div class="row">
       <div class="col-md-12">
-        <div id="map">
-          
-
-        </div>
-      </div>
-    </div>
-
-    <script>
+        <div id="map"></div>
+        <style>
+          #map {
+          width: 500px;
+          height: 400px;
+          background-color: #CCC;
+        }
+        </style>
+        <script>
       function initMap() {
         var mapDiv = document.getElementById('map');
         var map = new google.maps.Map(mapDiv, {
-          center: {lat: <%= @room.latitude %> lng: <%= @room.longitude %>},
+          center: {lat: 44.540, lng: -78.546},
           zoom: 8
         });
       }
@@ -155,5 +156,8 @@
     <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
         async defer></script>
 
+        </div>
+      </div>
+    </div>
   </div>
 </div>
