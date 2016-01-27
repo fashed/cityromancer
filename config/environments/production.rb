@@ -87,4 +87,6 @@ Rails.application.configure do
   }
 
   config.action_mailer.default_url_options = { :host => 'http://cityromancer.heroku.com' }
+
+  config.action_mailer.perform_deliveries = true
 end
