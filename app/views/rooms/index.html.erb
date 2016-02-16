@@ -5,7 +5,7 @@
         <%= link_to "Your Listings", rooms_path, class: "sidebar-link active" %>
       </li>
       <li class="sidebar-item">
-        <%= link_to "Your Reservations", rooms_path, class: "sidebar-link active" %>
+        <%= link_to "Your Reservations", rooms_path, class: "sidebar-link" %>
       </li>
     </ul>
   </div>
@@ -27,6 +27,7 @@
               <%= link_to "Update", edit_room_path(r), class: "btn-primary btn" %>
             </div>
           </div>
+          <hr>
         <% end %>
       </div>
     </div>
