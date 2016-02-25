@@ -292,3 +292,19 @@ input[type="checkbox"]:checked:before {
   background-position: center;
   height: 326px;
 }
+
+.va-container {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.va-middle {
+  color: #fff;
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.preview img {
+  max-height: 200px;
+}
