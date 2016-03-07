@@ -1,7 +1,18 @@
 <div class="row">
  
   <div class="col-md-3 text-center">
-    <%= image_tag avatar_url(@other), class: "img-circle avatar-medium" %><br>
+      
+    <%= render 'shared/avatar' %>
+
+     <% if @other.image %>
+      <%= image_tag avatar_url(@other), class: "img-circle avatar-small" %>
+    <% else %>
+      <p>
+        <i class="fa fa-user fa-5x"></i>
+      </p>
+    <% end %>
+
+    <br>
     <strong><%= @other.fullname %></strong>
     <%= link_to "View Profile", @other, class: "btn btn-default wide" %>
   </div>

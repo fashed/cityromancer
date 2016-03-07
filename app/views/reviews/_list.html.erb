@@ -8,7 +8,13 @@
     <div class="row">
       
       <div class="col-md-1">
+        <% if r.user.image %>
         <%= image_tag avatar_url(r.user), class: "img-circle avatar-medium" %>
+        <% else %>
+          <p>
+            <i class="fa fa-user fa-2x"></i>
+          </p>
+        <% end %>
       </div>
 
       <div class="col-md-11">

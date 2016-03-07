@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-md-3">
     <div class="center">
-    <% if current_user.image %>
+    <% if @user.image %>
       <%= image_tag avatar_url(@user), class: "avatar-full" %>
     <% else %>
       <p class="text-center">
@@ -57,7 +57,14 @@
           
           <div class="row">
             <div class="col-md-2 text-center">
-              <%= image_tag avatar_url(review.user), class: "img-circle avatar-medium" %> <br>
+              <% if review.user.image %>
+              <%= image_tag avatar_url(review.user), class: "img-circle avatar-medium" %> 
+              <% else %>
+                <p>
+                  <i class="fa fa-user fa-4x"></i>
+                </p>
+              <% end %>
+              <br>
               <%= review.user.fullname %>
             </div>
             <div class="col-md-10">
