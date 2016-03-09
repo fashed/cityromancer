@@ -29,12 +29,12 @@ class ReservationsController < ApplicationController
 				business: 'choijennifer-facilitator@hotmail.com',
 				cmd: '_xclick',
 				upload: 1,
-				notify_url: 'http://2bc6282c.ngrok.io/notify',
+				notify_url: 'http://cityromancer.herokuapp.com/notify',
 				amount: @reservation.total,
 				item_name: @reservation.room.listing_name,
 				item_number: @reservation.id,
 				quantity: '1',
-				return: 'http://2bc6282c.ngrok.io/your_trips'
+				return: 'http://cityromancer.herokuapp.com/your_trips'
 			}
 			redirect_to "https://www.sandbox.paypal.com/cgi-bin/webscr?" + values.to_query
 		else
