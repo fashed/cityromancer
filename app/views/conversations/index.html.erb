@@ -22,7 +22,7 @@
                 </div>
                 <div class="col-md-2">
                   <%= other.fullname %><br>
-                  <%= conversation.messages.last.message_time %>
+                  <%= conversation.messages.last.updated_at.localtime %>
                 </div>
                 <div class="col-md-8">
                   <%= conversation.messages.last.content %>
