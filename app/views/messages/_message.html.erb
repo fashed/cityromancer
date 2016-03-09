@@ -1,12 +1,6 @@
 <div class="panel">
   <div class="panel-body">
-    <% if message.user.image %>
-      <%= image_tag avatar_url(message.user), class: "img-circle avatar-small" %>
-    <% else %>
-      <p>
-        <i class="fa fa-user fa-2x"></i>
-      </p>
-    <% end %>
+    <%= image_tag avatar_url(message.user), class: "img-circle avatar-small" %>
     <strong><%= message.user.fullname %></strong>
 
     <span class="pull-right"><%= message.message_time %></span>
